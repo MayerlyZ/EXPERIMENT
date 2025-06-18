@@ -1,1 +1,0 @@
-let hola = prompt("stçç")
