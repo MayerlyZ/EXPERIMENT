@@ -23,9 +23,3 @@ botonReset.addEventListener('click', () => {
     contador = 0;
     valorContador.textContent = contador;
 });
-
-
-
-const dios = ("Todo lo que me proponga lo voy a lograr a la mano de Dios... Amen")
-
-alert(dios)
