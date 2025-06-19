@@ -1,7 +1,7 @@
 // List of days
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-// Referencias al DOM
+// References to the DOM
 const button = document.getElementById("showDays");
 const list = document.getElementById("listDays");
 
