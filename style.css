@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(./assets/img/12597.jpg);
+    background-color: var(--light-color);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
