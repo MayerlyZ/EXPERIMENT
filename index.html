@@ -1,70 +1,66 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Botones Interactivos</title>
+  <title>Interactive Buttons</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <h1>Botones Interactivos</h1> 
+  <h1>Interactive Buttons</h1> 
 
-
+  <!-- Main container for all button sections -->
   <div class="container">
 
-     <!-- Sección Validación de Entrada -->
-     <div class="button-section">
-      <h2>Validación de entrada</h2>
-      <button onclick="validarEntrada()">validar</button>
-      <input type="text" id="entrada"placeholder="Escribe algo aqui...">
-      <p id="mensaje"></p>
-     </div>
- 
-    <!-- Sección Mensaje Aleatorio -->
+    <!-- Input Validation Section -->
     <div class="button-section">
-      <h2>Mensaje Inspirador</h2>
-      <button id="aleatoryButton">
-        <span>✨</span> Mensaje Aleatorio
-      </button>
-      <div id="mensaje" class="output-box"></div>
+      <h2>Input Validation</h2>
+      <button onclick="validateInput()">Validate</button>
+      <input type="text" id="inputField" placeholder="Type something here...">
+      <p id="validationMessage"></p>
+    </div>
+ 
+    <!-- Random Message Section -->
+    <div class="button-section">
+      <h2>Inspirational Message</h2>
+      <button id="randomButton"><span>✨</span> Random Message</button>
+      <div id="randomMessage" class="output-box"></div>
     </div>
     
-    <!-- Sección Saludo Condicional -->
+    <!-- Conditional Greeting Section -->
     <div class="button-section">
-      <h2>Saludo del Día</h2>
-      <button id="greetingButton">
-        <span>🕒</span> Obtener Saludo
-      </button>
+      <h2>Time-Based Greeting</h2>
+      <button id="greetingButton"><span>🕒</span> Get Greeting</button>
       <div id="greetingOutput" class="output-box greeting-output"></div>
     </div>
     
-    <!-- Sección Contador -->
+    <!-- Counter Section -->
     <div class="button-section">
-      <h2>Contador</h2>
-      <div class="contador">
-        <button id="decrementar">-</button>
-        <span id="valor-contador">0</span>
-        <button id="incrementar">+</button>
-        <button id="reset">Reiniciar</button>
+      <h2>Counter</h2>
+      <div class="counter">
+        <button id="decrement">-</button><span id="counter-value">0</span>
+        <button id="increment">+</button>
+        <button id="reset">Reset</button>
       </div>
     </div>
 
-
   </div>
 
+  <!-- JavaScript files for each button functionality -->
   <script src="./buttons/button_Aleatory.js"></script>
   <script src="./buttons/button_Greeting.js"></script>
-  <script src="./buttons/buttonContador.js"></script>
+  <script src="./buttons/button_Counter.js"></script>
   <script src="./buttons/button_Validation.js"></script>
   
+  <!-- Animation script for random message button -->
   <script>
- 
-    document.getElementById("aleatoryButton").addEventListener("click", function() {
-      mostrarMensajeAleatorio();
-      document.getElementById("mensaje").classList.add("fade-in");
+    document.getElementById("randomButton").addEventListener("click", function() {
+      showRandomMessage();
+      document.getElementById("randomMessage").classList.add("fade-in");
       setTimeout(() => {
-        document.getElementById("mensaje").classList.remove("fade-in");
+        document.getElementById("randomMessage").classList.remove("fade-in");
       }, 500);
     });
   </script>

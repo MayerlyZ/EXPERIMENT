@@ -1,20 +1,20 @@
-// Array de mensajes
-const mensajes = [
-    "¡Hola mundo!",
-    "¡Que tengas un gran día!",
-    "Sigue aprendiendo.",
-    "La práctica hace al maestro.",
-    "¡Nunca te rindas!"
-  ];
+// Array of messages
+const messages = [
+    "Hello world!",
+    "Have a great day!",
+    "Keep learning.",
+    "Practice makes perfect.",
+    "Never give up!"
+];
 
-  // Función para elegir un mensaje aleatorio
-  function elegirMensajeAleatorio(arr) {
-    const indice = Math.floor(Math.random() * arr.length);
-    return arr[indice];
-  }
+// Function to choose a random message
+function getRandomMessage(arr) {
+    const index = Math.floor(Math.random() * arr.length);
+    return arr[index];
+}
 
-  // Función para mostrar el mensaje en la página
-  function mostrarMensajeAleatorio() {
-    const mensaje = elegirMensajeAleatorio(mensajes);
-    document.getElementById("mensaje").textContent = mensaje;
-  }
+// Function to display the message on the page
+function showRandomMessage() {
+    const message = getRandomMessage(messages);
+    document.getElementById("randomMessage").textContent = message;
+}

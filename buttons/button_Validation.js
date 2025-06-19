@@ -1,23 +1,18 @@
-// declaramos una funcion que se ejecutaal hacer clic en el boton
+// Function that executes when the button is clicked
+function validateInput() {
+  // Get the input value
+  let inputValue = document.getElementById("inputField").value;
 
-function validarEntrada() {
-  // obtenemos el valor del input
-  let valorIngresado = document.getElementById("entrada").value;
-
-  // validamos si el valor esta vacio (falsy) o tiene contenido (truthy)
-  if (valorIngresado) {
-    // si tiene texto, mostramos un mensaje positivo
-
-    document.getElementById("mensaje").textContent =
-      "¡Gracias por escribir algo!";
-
-    document.getElementById("mensaje").style.color = "green";
+  // Check if the value is empty (falsy) or has content (truthy)
+  if (inputValue) {
+    // If there is text, show a positive message
+    document.getElementById("validationMessage").textContent =
+      "Thank you for writing something!";
+    document.getElementById("validationMessage").style.color = "green";
   } else {
-    // si esta vacio, mostramosun mensaje de advertencia
-
-    document.getElementById("mensaje").textContent =
-      "El campo esta vacio, por favor escribe algo";
-
-    document.getElementById("mensaje").style.color = "red";
+    // If empty, show a warning message
+    document.getElementById("validationMessage").textContent =
+      "The field is empty, please write something";
+    document.getElementById("validationMessage").style.color = "red";
   }
 }
