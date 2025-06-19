@@ -14,6 +14,13 @@
   <!-- Main container for all button sections -->
   <div class="container">
 
+  <!-- Button with the days of the week -->
+    <div class="button-section">
+        <h2>Days of the Week</h2>
+        <button onclick="listOfDays()" id="showDays">Show days of the week</button>
+        <ul id="listDays"></ul>
+    </div>
+
     <!-- Input Validation Section -->
     <div class="button-section">
       <h2>Input Validation</h2>
@@ -35,6 +42,7 @@
       <button id="greetingButton"><span>🕒</span> Get Greeting</button>
       <div id="greetingOutput" class="output-box greeting-output"></div>
     </div>
+
     
     <!-- Counter Section -->
     <div class="button-section">
@@ -53,6 +61,7 @@
   <script src="./buttons/button_Greeting.js"></script>
   <script src="./buttons/button_Counter.js"></script>
   <script src="./buttons/button_Validation.js"></script>
+  <script src="./buttons/button_Cycle.js"></script>
   
   <!-- Animation script for random message button -->
   <script>
