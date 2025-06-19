@@ -1,32 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botones Interactivos</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>JavaScript Buttons</h1>
-    <button id="aleatoryButton" >Aleatory Number</button>
-
-    <button id="greetingButton">Greeting</button>
-    <button id="contadorButton">Contador</button>
-
-    <div id="output"></div>
-    <button onclick="mostrarMensajeAleatorio()">Mostrar mensaje aleatorio</button>
-    <p id="mensaje"></p>
-    <script src="./buttons/button_Aleatory.js"></script>
-    <script src="./buttons/button_Greeting.js"></script>
-    <script src="./buttons/buttonContador.js"></script>
-
-    <button>Validador de entrada</button>
-
+<div class="container"
+    <h2>Validación de entrada</h2>
+    <button onclick="validarEntrada()">validar</button>
     <input type="text" id="entrada"
     placeholder="Escribe algo aqui...">
-    <button onclick="validarEntrada()">validar</button>
-
     <p id="mensaje"></p>
+</div>
+ 
 
-    <script src="buttons/button_Validation.js"></script>
+  <div class="container">
+    <h1>Botones Interactivos</h1> 
+    <!-- Sección Mensaje Aleatorio -->
+    <div class="button-section">
+      <h2>Mensaje Inspirador</h2>
+      <button id="aleatoryButton">
+        <span>✨</span> Mensaje Aleatorio
+      </button>
+      <div id="mensaje" class="output-box"></div>
+    </div>
+    
+    <!-- Sección Saludo Condicional -->
+    <div class="button-section">
+      <h2>Saludo del Día</h2>
+      <button id="greetingButton">
+        <span>🕒</span> Obtener Saludo
+      </button>
+      <div id="greetingOutput" class="output-box greeting-output"></div>
+    </div>
+    
+    <!-- Sección Contador -->
+    <div class="button-section">
+      <h2>Contador</h2>
+      <div class="contador">
+        <button id="decrementar">-</button>
+        <span id="valor-contador">0</span>
+        <button id="incrementar">+</button>
+        <button id="reset">Reiniciar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./buttons/button_Aleatory.js"></script>
+  <script src="./buttons/button_Greeting.js"></script>
+  <script src="./buttons/buttonContador.js"></script>
+  <script src="buttons/button_Validation.js"></script>
+  
+  <script>
+ 
+    document.getElementById("aleatoryButton").addEventListener("click", function() {
+      mostrarMensajeAleatorio();
+      document.getElementById("mensaje").classList.add("fade-in");
+      setTimeout(() => {
+        document.getElementById("mensaje").classList.remove("fade-in");
+      }, 500);
+    });
+  </script>
 </body>
 </html>
