@@ -1,30 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Buttons</title>
+  <link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>JavaScript Buttons</h1>
-    <button id="aleatoryButton" >Aleatory Number</button>
+  <h1>Interactive Buttons</h1> 
 
-    <button id="greetingButton">Greeting</button>
-    <button id="contadorButton">Contador</button>
+  <!-- Main container for all button sections -->
+  <div class="container">
 
-    <div id="output"></div>
-
-    <!-- Button with the days of the week -->
-    <div>
+  <!-- Button with the days of the week -->
+    <div class="button-section">
         <h2>Days of the Week</h2>
         <button onclick="listOfDays()" id="showDays">Show days of the week</button>
         <ul id="listDays"></ul>
     </div>
 
-    <script src="./buttons/button_Aleatory.js"></script>
-    <script src="./buttons/button_Greeting.js"></script>
-    <script src="./buttons/buttonContador.js"></script>
-    <script src="./buttons/button_Cycle.js"></script>
+    <!-- Input Validation Section -->
+    <div class="button-section">
+      <h2>Input Validation</h2>
+      <button onclick="validateInput()">Validate</button>
+      <input type="text" id="inputField" placeholder="Type something here...">
+      <p id="validationMessage"></p>
+    </div>
+ 
+    <!-- Random Message Section -->
+    <div class="button-section">
+      <h2>Inspirational Message</h2>
+      <button id="randomButton"><span>✨</span> Random Message</button>
+      <div id="randomMessage" class="output-box"></div>
+    </div>
     
+    <!-- Conditional Greeting Section -->
+    <div class="button-section">
+      <h2>Time-Based Greeting</h2>
+      <button id="greetingButton"><span>🕒</span> Get Greeting</button>
+      <div id="greetingOutput" class="output-box greeting-output"></div>
+    </div>
+
+    
+    <!-- Counter Section -->
+    <div class="button-section">
+      <h2>Counter</h2>
+      <div class="counter">
+        <button id="decrement">-</button><span id="counter-value">0</span>
+        <button id="increment">+</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript files for each button functionality -->
+  <script src="./buttons/button_Aleatory.js"></script>
+  <script src="./buttons/button_Greeting.js"></script>
+  <script src="./buttons/button_Counter.js"></script>
+  <script src="./buttons/button_Validation.js"></script>
+  <script src="./buttons/button_Cycle.js"></script>
+  
+  <!-- Animation script for random message button -->
+  <script>
+    document.getElementById("randomButton").addEventListener("click", function() {
+      showRandomMessage();
+      document.getElementById("randomMessage").classList.add("fade-in");
+      setTimeout(() => {
+        document.getElementById("randomMessage").classList.remove("fade-in");
+      }, 500);
+    });
+  </script>
 </body>
 </html>
