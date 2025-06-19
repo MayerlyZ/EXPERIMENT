@@ -16,7 +16,7 @@ function validarEntrada() {
     // si esta vacio, mostramosun mensaje de advertencia
 
     document.getElementById("mensaje").textContent =
-      "Elcampo esta vacio, por favor escribe algo";
+      "El campo esta vacio, por favor escribe algo";
 
     document.getElementById("mensaje").style.color = "red";
   }
