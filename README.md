@@ -3,6 +3,7 @@
 Este proyecto es una demostración de una interfaz web con múltiples botones interactivos que realizan diferentes acciones utilizando HTML, CSS y JavaScript. Cada sección tiene una funcionalidad específica para mostrar cómo se puede manipular el DOM y responder a eventos del usuario.
 
 🚀 Funcionalidades
+
 ✅ 1. Días de la semana
 Muestra una lista de los días cuando se presiona el botón "Show days of the week".
 
