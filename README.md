@@ -51,6 +51,9 @@ Cada funcionalidad está dividida en archivos JavaScript separados para mantener
 
 La clase .fade-in usada en el botón de mensaje aleatorio requiere una animación CSS incluida en style.css.
 
+Presentacion
+https://gamma.app/docs/Proyecto-Botones-Interactivos-eiht2pvkjnibk8a
+
 🧑‍💻 Autor
 Ecmas
 Desarrollador Web en formación 💻
