@@ -31,7 +31,7 @@ Cambia el color de fondo de un elemento al presionar el botón.
 🛠️ Tecnologías Utilizadas
 HTML5
 
-CSS3
+CSS
 
 JavaScript (vanilla)
 
