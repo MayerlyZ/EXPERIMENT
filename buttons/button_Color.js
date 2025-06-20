@@ -4,7 +4,7 @@ let colorIndex = 0;
 
 // Get button and target element
 const colorButton = document.getElementById("colorButton");
-const element = document.getElementById("elemento");
+const element = document.getElementById("element");
 
 // Change background color on button click
 colorButton.addEventListener("click", function() {
